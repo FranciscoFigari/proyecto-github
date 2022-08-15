@@ -1,0 +1,275 @@
+/* aplicamos el reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+
+header{
+    background-color: #f4f7f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* encontrar imagen en la medida adecuada e insertar 
+    background-image: url(../img/cancha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+}
+
+.menu{
+    background-color: #f4f7f6;
+    display: inline-block;
+    text-align: center;
+    position: sticky;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    background-color: #e3e2df;
+    padding: 5px;
+    display: inline-block;
+}    
+
+
+h1{
+    text-align: center;
+}
+
+.main-index{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: 1fr;
+
+    grid-template-areas: 
+        "ultimo-partido fixture-proxima "
+           
+    ;
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    margin-top: 100px;
+
+}
+
+
+
+.ultimo-partido{
+    grid-area: ultimo-partido;
+    text-decoration: underline;
+    font-size: x-large;
+
+}
+
+.fixture-proxima{
+    grid-area: fixture-proxima;
+    font-size: x-large;
+    text-decoration: underline;
+
+}
+
+
+/* Utilizamos margin-top para enviar el footer debajo, en vez de br*/
+
+.footer{
+    background-color: #f4f7f6;
+    margin: 10px;
+    border: 3px solid black;
+    margin-top: 500px;
+    overflow: hidden;
+}
+
+div footer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.caja-direccion{
+    text-align: right;
+}
+
+/*.contacto-mail{
+
+  
+}*/
+
+footer h3{
+    color: black;
+    text-decoration: underline;
+}
+
+footer div h4{
+    color: black;
+    text-decoration: underline;
+}
+
+/* CSS para Prep-Fisica */
+
+main h2{
+    text-decoration: underline;
+}
+
+.rutinas{
+    top: 50px;
+    text-decoration: underline;
+    margin: 25px;
+    
+          
+}
+
+.rutina-1{
+    text-align: left;
+    
+}
+
+.rutina-2{
+    text-align: right;
+}
+
+#fin-de-pagina{
+    margin-top: 700px;
+}
+
+/* CSS Partidos */
+
+.main-partidos{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+    
+
+    grid-template-areas: 
+        "titulo-partidos titulo-partidos"
+        "parrafo-partidos parrafo-partidos"
+        "videos-partidos videos-partidos"
+    
+    ;
+}
+
+main h2{
+    grid-area: titulo-partidos;
+}
+
+main p{
+    grid-area: parrafo-partidos;
+}
+
+main ol{
+    grid-area: videos-partidos;
+}
+
+
+.partidos{
+    margin: 10px;
+    border: 3px solid black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partido-1{
+    padding: 50px;
+
+}
+
+.partido-2{
+    padding: 50px;
+
+}
+
+
+
+div section iframe{
+    width: 150%;
+}
+
+div section img{
+    width: 100%;
+}
+
+/* CSS Links & Contacto */
+
+.lista-links{
+    list-style: circle black;
+    margin: 30px;
+}
+
+
+main section ul{
+    list-style: none;
+}
+
+.info-contacto{
+    background-color: rgb(240, 226, 209);
+    height: 200px;
+    width: 1350px;
+    border: 3px solid black;
+    margin: 50px;
+    padding: 10px;
+
+}
+
+
+
+.formulario{
+    background-color: rgb(240, 226, 209);
+    height: 250px;
+    width: 1350px;
+    border: 3px solid black; 
+    margin: 50px;
+    padding: 10px;
+}
+
+/* mediaqueries */
+
+@media screen and (min-width:375px) and (max-width:799px){
+
+    header h1{
+        font-size: 1rem;
+                
+    }
+    .menu{
+        display: flex;
+
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-index{
+        display: flex;
+        flex-direction: column;
+    }
+    div section iframe{
+        width: 100%;
+    }
+
+    .partidos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main ol div iframe{
+        width: 100%;
+    }
+}
